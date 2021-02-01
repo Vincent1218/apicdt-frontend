@@ -24,7 +24,7 @@ const Register = () => {
       },
       body: JSON.stringify(registerData),
     })
-    const data = await res
+    const data = await res.json()
     console.log(data);
     console.log('res', res) ;
     if (res.status === 201){
@@ -49,6 +49,14 @@ const Register = () => {
 
     addRegisterData(registerData);
     setRegisterData ({engSchoolName : '',chiSchoolName : '',engTeamLeaderName : '',chiTeamLeaderName : '',teamLeaderContact : '',teamLeaderEmail : '',debateTopics_1 : '',debateTopics_2 : ''});
+    setChanged_1(false);
+    setChanged_2(false);
+    setChanged_3(false);
+    setChanged_4(false);
+    setChanged_5(false);
+    setChanged_6(false);
+    setChanged_7(false);
+    setChanged_8(false);
 
 
   }
@@ -93,7 +101,7 @@ const Register = () => {
                 <input type="text" className={`form-control   ${registerData.teamLeaderContact ? "is-valid" : ""} ${(!registerData.teamLeaderContact && changed_5) ? "is-invalid" : ""}`}  value={registerData.teamLeaderContact} placeholder="队长联络电话" onChange={(e) => setChanged_5(true) & setRegisterData({ ...registerData, teamLeaderContact: e.target.value })}/>
               </div>
               <div className="mb-3">
-                <input type="email" className={`form-control   ${registerData.teamLeaderEmail ? "is-valid" : ""} ${(!registerData.teamLeaderEmail && changed_6) ? "is-invalid" : ""}`} value={registerData.teamLeaderEmail} placeholder="队长电邮地址" onChange={(e) => setChanged_6(true) & setRegisterData({ ...registerData, teamLeaderEmail: e.target.value })}/>
+                <input type="email" className={`form-control englishF   ${registerData.teamLeaderEmail ? "is-valid" : ""} ${(!registerData.teamLeaderEmail && changed_6) ? "is-invalid" : ""}`} value={registerData.teamLeaderEmail} placeholder="队长电邮地址" onChange={(e) => setChanged_6(true) & setRegisterData({ ...registerData, teamLeaderEmail: e.target.value })}/>
               </div>
             </div>
             <div className="topics container">
