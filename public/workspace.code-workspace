@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\apicdt-website"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "apicdt-website"
+	}
+}

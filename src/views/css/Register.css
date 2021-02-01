@@ -1,0 +1,153 @@
+/* html,body
+{ */
+    /* width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;  */
+    
+/* }  */
+
+.block{
+  position: absolute;
+  height:100vh;
+  width: 100%;
+  background-color: #F5F5F5;
+  /* background-image:   
+	url("image/bg-top.png"), 
+	url("image/bg-middle.png"),
+	url("image/bg-bottom.png");
+  background-repeat: repeat-x;
+  background-position: 
+	0 20%,
+	0 10%,
+	0 50%;
+  background-size: 
+	2800px,
+	1600px,
+	2000px;
+  animation: 50s para infinite linear;
+	background-attachment: fixed; */
+}
+
+/* ::placeholder{
+  font-family: Arial, Helvetica, sans-serif;
+} */
+
+.main_block{
+  color:#3B454C;
+  background-color:#FFFFFF;
+  margin: auto;
+  margin-top: 8%; 
+  width: 60%;
+  border:1px solid #cecece;
+  border-radius: 0.5rem;
+  padding: 5%;
+  padding-top:1%;
+  padding-bottom:3%;
+  margin-bottom:5%;
+  box-shadow: 0rem 0rem 0.5rem #8d8d8d;
+}
+
+.englishF{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.regForm{
+  padding-right: 5%;
+}
+
+.register_header{
+  padding-left:0.8rem;
+  margin-top:2.5%;
+  margin-bottom:2%;
+  font-size: 2.5vw;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.school{
+  padding-left:0;
+  padding-right:0;
+  margin-bottom: 2%;
+}
+
+.leader{
+  padding-left:0;
+  padding-right:0;
+  margin-bottom: 5%;
+}
+
+.topics{
+  padding-left:0;
+  padding-right:0;
+  padding-bottom:3%;
+}
+
+.formHeader{
+  font-size:1.5vw;
+  margin-bottom: 2%;
+}
+
+.btn{
+  width:100%;
+  background-color: #6353F0;
+  border: none;
+  margin-top:5%;
+  font-size:1.3vw;
+}
+
+.logo{
+  padding-left: 5%;
+  padding-top:2%
+}
+
+/* .aten-logo{
+	position:absolute;
+	z-index: 1;
+}
+
+.abian-logo{
+	position:absolute;
+	z-index: 2;
+	right:1%;
+} */
+
+.remarks{
+  font-size:1vw;
+  color:#919191;
+  padding-left: 3%;
+  margin-top:1%;
+}
+
+.form-control{
+  font-size: 1vw;
+}
+
+@media screen and (max-width:768px){
+	.bian-logo{
+		display:none;
+	}
+	.ten-logo{
+    display:none;
+  }
+  .main_block{
+    width:80%;
+  }
+  .register_header{
+    font-size: 4vw;
+  }
+  .form-control{
+    font-size: 2.3vw;
+    height: 1.8rem;
+  }
+  .formHeader{
+    font-size: 3vw;
+  }
+  .btn{
+    font-size:2vw;
+  }
+  .remarks{
+    font-size:1.5vw;
+  }
+}
+

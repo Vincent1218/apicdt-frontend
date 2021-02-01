@@ -1,0 +1,151 @@
+/*The first section, which contain logo and title*/
+.logo-block{
+	height:100vh;
+  background-color: #F5F5F5;
+  background-image:   
+	url("../../assets/image/bg-top.png"), 
+	url("../../assets/image/bg-middle.png"),
+	url("../../assets/image/bg-bottom.png");
+  background-repeat: repeat-x;
+  background-position: 
+	0 20%,
+	0 10%,
+	0 50%;
+  background-size: 
+	100%,100%,100%;
+  animation: 50s para infinite linear;
+	background-attachment: fixed;
+  }
+
+/*parallel animation of header background*/
+@keyframes para {
+  100% {
+    background-position: 
+      -5000px 20%,
+      -800px 95%,
+      500px 50%;
+    }
+  }
+
+/*ten logo and its animation*/
+.ten-logo{
+	position: absolute;
+	z-index: 1;
+	animation-name: ten-animation;
+	animation-duration:3s;
+	animation-fill-mode:forwards;
+	animation-timing-function:ease-out;
+}
+
+.img-container{
+    margin:auto;
+}
+
+@keyframes ten-animation{
+	0%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 0.5;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+/*bian logo and its animation*/
+.bian-logo{
+	position: relative;
+	z-index: 1;
+	animation-name: bian-animation;
+	animation-duration:3s;
+	animation-fill-mode:forwards;
+	animation-timing-function:ease-out;
+}
+
+@keyframes bian-animation{
+	0%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 0.25;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+/*header title and its animation */
+.header{
+	animation-name: header-animation;
+	animation-duration:3s;
+	animation-fill-mode:forwards;
+	animation-timing-function:ease-out;
+}
+
+@keyframes header-animation{
+	0%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+h1{
+	text-shadow: 2px 2px 2px #3b454c;
+}
+h1.eng-title{
+	font-family: Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, 'serif';
+	line-height: 0.8;
+	font-size: 2vw;
+}
+h1.cn-title-1{
+	font-size: 6vw;
+}
+h1.cn-title-2{
+	font-size: 4vw;
+}
+
+/*The Second Section, contains info*/
+.css-selector {
+    background: linear-gradient(274deg, #fbc2eb, #d4c2ec, #fbc2eb, #a6c1ee);
+    background-size: 800% 800%;
+
+    animation: MovingGradient 15s ease infinite;
+    -moz-animation: MovingGradient 15s ease infinite;
+    animation: MovingGradient 15s ease infinite;
+}
+
+@keyframes MovingGradient {
+    0%{background-position:81% 0%}
+    50%{background-position:20% 100%}
+    100%{background-position:81% 0%}
+}
+@-moz-keyframes MovingGradient {
+    0%{background-position:81% 0%}
+    50%{background-position:20% 100%}
+    100%{background-position:81% 0%}
+}
+@keyframes MovingGradient {
+    0%{background-position:81% 0%}
+    50%{background-position:20% 100%}
+    100%{background-position:81% 0%}
+}
+
+
+/*changes made when screen size is small(bootstrap small)*/
+@media screen and (max-width:576px){
+	h1.eng-title{
+		font-size: 4vw;
+	}
+	h1.cn-title-1{
+		font-size: 12vw;
+	}
+	h1.cn-title-2{
+		font-size: 8vw;
+	}
+}
