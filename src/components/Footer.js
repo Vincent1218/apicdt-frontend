@@ -26,10 +26,10 @@ class Footer extends Component {
                 <div className="col-sm-6">
                   <h4>Follow Us</h4>
                       <ul className="social-network social-circle">
-                       <li><a href="https://www.facebook.com/NTUChineseSoc/" className="icoFacebook" title="Facebook" target="_blank" rel="noreferrer"><i className="fab fa-facebook-f"></i></a></li>
-                       <li><a href="https://www.instagram.com/ntuchinesesoc/" className="icoinstagram" title="instagram" target="_blank" rel="noreferrer"><i className="fab fa-instagram"></i></a></li>
-                       <li><a href="https://www.youtube.com/user/NTUChineseSociety/" className="icoyoutube" title="youtube" target="_blank" rel="noreferrer"><i className="fab fa-youtube"></i></a></li>
-                       <li><a href="https://weibo.com/3085264027/" className="icoweibo" title="weibo" target="_blank" rel="noreferrer"><i className="fab fa-weibo"></i></a></li>
+                       <li><a href="https://www.facebook.com/NTUCSapchinesedebate/" className="icoFacebook" title="Facebook" target="_blank" rel="noreferrer"><i className="fab fa-facebook-f"></i></a></li>
+                       <li><a href="https://www.instagram.com/apchinesedebate/" className="icoinstagram" title="instagram" target="_blank" rel="noreferrer"><i className="fab fa-instagram"></i></a></li>
+                       <li><a href="https://www.youtube.com/channel/UCbcpKtCxhYXWGptwk-deteg" className="icoyoutube" title="youtube" target="_blank" rel="noreferrer"><i className="fab fa-youtube"></i></a></li>
+                       <li><a href="https://weibo.com/u/5398940329" className="icoweibo" title="weibo" target="_blank" rel="noreferrer"><i className="fab fa-weibo"></i></a></li>
                       </ul>       
                 </div>
               </div>
