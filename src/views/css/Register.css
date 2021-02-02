@@ -90,11 +90,12 @@
 }
 
 .btn{
-  width:100%;
-  background-color: #6353F0;
+  width:96%;
+  background-color: #6353F0 ;
   border: none;
   margin-top:5%;
   font-size:1.3vw;
+  margin-left: 0.8rem;
 }
 
 .logo{
@@ -154,3 +155,6 @@
 
 
 
+.modal{
+  padding-top: 5rem;
+}

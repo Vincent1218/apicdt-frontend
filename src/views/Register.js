@@ -4,6 +4,8 @@ import './css/Register.css';
 import logoBase from '../assets/image/yatai 10th logo-10.png';
 import logoTop1 from '../assets/image/yatai 10th logo-bian.png';
 
+import Alert from 'react-bootstrap/Alert';
+
 
 const Register = () => {
   const [registerData, setRegisterData] = useState ({engSchoolName : '',chiSchoolName : '',engTeamLeaderName : '',chiTeamLeaderName : '',teamLeaderContact : '',teamLeaderEmail : '',debateTopics_1 : '',debateTopics_2 : ''});
@@ -15,6 +17,13 @@ const Register = () => {
   const[changed_6,setChanged_6] = useState(false);
   const[changed_7,setChanged_7] = useState(false);
   const[changed_8,setChanged_8] = useState(false);
+
+
+  const [showS, setShowS] = useState(false);
+  const [showF, setShowF] = useState(false);
+
+
+
 
   const addRegisterData = async (registerData) =>{
     const res = await fetch ('https://apicdt.herokuapp.com/register',{
@@ -28,7 +37,12 @@ const Register = () => {
     console.log(data);
     console.log('res', res) ;
     if (res.status === 201){
-
+      setShowS(true);
+      setShowF(false);
+    }
+    else{
+      setShowF(true);
+      setShowS(false);
     }
   }
 
@@ -43,6 +57,8 @@ const Register = () => {
     registerData.teamLeaderEmail === '' ||
     registerData.debateTopics_1 === '' ||
     registerData.debateTopics_2 ==='' ){
+      setShowF(true);
+      setShowS(false);
       return;
     }
 
@@ -64,6 +80,12 @@ const Register = () => {
   return (
     <section className="header-gradient"> 
       <div className="container main_block">
+        <Alert show={showS} class= "alert" variant="success" onClose={() => setShowS(false)} dismissible>
+          <Alert.Heading>提交成功 ！！</Alert.Heading>
+        </Alert>
+        <Alert show={showF} class= "alert" variant="danger" onClose={() => setShowF(false)} dismissible>
+          <Alert.Heading>提交失败 ！！</Alert.Heading>
+        </Alert>
         <div className="register_header">
             <span className = "englishF"> Register / </span> <span> 注册 </span>
         </div>
@@ -101,7 +123,7 @@ const Register = () => {
                 <input type="text" className={`form-control   ${registerData.teamLeaderContact ? "is-valid" : ""} ${(!registerData.teamLeaderContact && changed_5) ? "is-invalid" : ""}`}  value={registerData.teamLeaderContact} placeholder="队长联络电话" onChange={(e) => setChanged_5(true) & setRegisterData({ ...registerData, teamLeaderContact: e.target.value })}/>
               </div>
               <div className="mb-3">
-                <input type="email" className={`form-control englishF   ${registerData.teamLeaderEmail ? "is-valid" : ""} ${(!registerData.teamLeaderEmail && changed_6) ? "is-invalid" : ""}`} value={registerData.teamLeaderEmail} placeholder="队长电邮地址" onChange={(e) => setChanged_6(true) & setRegisterData({ ...registerData, teamLeaderEmail: e.target.value })}/>
+                <input type="email" className={`form-control   ${registerData.teamLeaderEmail ? "is-valid" : ""} ${(!registerData.teamLeaderEmail && changed_6) ? "is-invalid" : ""}`} value={registerData.teamLeaderEmail} placeholder="队长电邮地址" onChange={(e) => setChanged_6(true) & setRegisterData({ ...registerData, teamLeaderEmail: e.target.value })}/>
               </div>
             </div>
             <div className="topics container">
@@ -119,7 +141,7 @@ const Register = () => {
               <div className="form-text remarks englishF">Remarks: The topics submitted will be used for this tournament. </div>
               <div className="form-text remarks">备注：所提交之辩题将会作为本赛事之用 </div>
             </div>
-            <button  type="submit" className="btn btn-primary" value='Save Form'>
+            <button  type="submit" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal" value='Save Form'>
               <span className = "englishF"> Submit / </span> <span> 提交 </span>
             </button>
           </form>
