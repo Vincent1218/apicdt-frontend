@@ -18,6 +18,8 @@ const Register = () => {
   const[changed_7,setChanged_7] = useState(false);
   const[changed_8,setChanged_8] = useState(false);
 
+  const[isEmail1,setIsEmail1] = useState(false);
+
 
   const [showS, setShowS] = useState(false);
   const [showF, setShowF] = useState(false);
@@ -45,9 +47,24 @@ const Register = () => {
       setShowS(false);
     }
   }
+  
+  function isEmail(val){
+    // let regEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    let regEmail = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
+    if(regEmail.test(val)){
+      setIsEmail1(true);
+    }
+    else{
+      setIsEmail1(false);
+    }
+  }
 
   const onSubmit = (e) =>{
     e.preventDefault()
+
+    isEmail(registerData.teamLeaderEmail);
+    
+    console.log(isEmail1);
 
     if(registerData.engSchoolName === '' ||
     registerData.chiSchoolName === '' ||
@@ -56,11 +73,14 @@ const Register = () => {
     registerData.teamLeaderContact === '' ||
     registerData.teamLeaderEmail === '' ||
     registerData.debateTopics_1 === '' ||
-    registerData.debateTopics_2 ==='' ){
+    registerData.debateTopics_2 ==='' ||
+    isEmail1 === false){
       setShowF(true);
       setShowS(false);
       return;
     }
+
+    
 
 
     addRegisterData(registerData);
@@ -123,7 +143,7 @@ const Register = () => {
                 <input type="text" className={`form-control   ${registerData.teamLeaderContact ? "is-valid" : ""} ${(!registerData.teamLeaderContact && changed_5) ? "is-invalid" : ""}`}  value={registerData.teamLeaderContact} placeholder="队长联络电话" onChange={(e) => setChanged_5(true) & setRegisterData({ ...registerData, teamLeaderContact: e.target.value })}/>
               </div>
               <div className="mb-3">
-                <input type="email" className={`form-control   ${registerData.teamLeaderEmail ? "is-valid" : ""} ${(!registerData.teamLeaderEmail && changed_6) ? "is-invalid" : ""}`} value={registerData.teamLeaderEmail} placeholder="队长电邮地址" onChange={(e) => setChanged_6(true) & setRegisterData({ ...registerData, teamLeaderEmail: e.target.value })}/>
+                <input type="email" className={`form-control   ${(registerData.teamLeaderEmail && isEmail1) ? "is-valid" : ""} ${(!registerData.teamLeaderEmail && changed_6) ? "is-invalid" : ""}`} value={registerData.teamLeaderEmail} placeholder="队长电邮地址" onChange={(e) =>   setChanged_6(true) & setRegisterData({ ...registerData, teamLeaderEmail: e.target.value }) & isEmail(registerData.teamLeaderEmail)}/>
               </div>
             </div>
             <div className="topics container">
