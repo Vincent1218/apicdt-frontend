@@ -48,15 +48,16 @@ const Register = () => {
     }
   }
   
-  function isEmail(val){
-    // let regEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    let regEmail = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
+  const isEmail=(val)=>{
+    let regEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    // let regEmail = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
     if(regEmail.test(val)){
       setIsEmail1(true);
     }
     else{
       setIsEmail1(false);
     }
+    // console.log(isEmail1);
   }
 
   const onSubmit = (e) =>{
@@ -64,7 +65,7 @@ const Register = () => {
 
     isEmail(registerData.teamLeaderEmail);
     
-    console.log(isEmail1);
+    // console.log(isEmail1);
 
     if(registerData.engSchoolName === '' ||
     registerData.chiSchoolName === '' ||
