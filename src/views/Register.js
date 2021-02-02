@@ -2,7 +2,7 @@ import { useState } from 'react'
 import React from 'react'
 import './css/Register.css';
 import logoBase from '../assets/image/yatai 10th logo-10.png';
-import logoTop1 from '../assets/image/yatai 10th logo-bian.png';
+import logo from '../assets/image/yatai 10th logo-bian.png';
 
 import Alert from 'react-bootstrap/Alert';
 
@@ -81,10 +81,10 @@ const Register = () => {
     <section className="header-gradient"> 
       <div className="container main_block">
         <Alert show={showS} class= "alert" variant="success" onClose={() => setShowS(false)} dismissible>
-          <Alert.Heading>提交成功 ！！</Alert.Heading>
+          <Alert.Heading class = "alertHeading"> 提交成功 ！/ Registration Successful ！ </Alert.Heading>
         </Alert>
         <Alert show={showF} class= "alert" variant="danger" onClose={() => setShowF(false)} dismissible>
-          <Alert.Heading>提交失败 ！！</Alert.Heading>
+          <Alert.Heading class = "alertHeading"> 提交失败 ！/ Registration Failed ！ </Alert.Heading>
         </Alert>
         <div className="register_header">
             <span className = "englishF"> Register / </span> <span> 注册 </span>
@@ -146,8 +146,8 @@ const Register = () => {
             </button>
           </form>
           <div className="col-4 logo">
-            <img src= {logoBase} alt="Asia-Pacific Intervarsity Chinese Debate Tournament" className="ten-logo" width="80%" />
-            <img src={logoTop1} alt="Asia-Pacific Intervarsity Chinese Debate Tournament" className="bian-logo" width="80%" />
+            <img src= {logoBase} alt="Asia-Pacific Intervarsity Chinese Debate Tournament" className="register-page-logo ten-logo" width="80%" />
+            <img src= {logo} alt="Asia-Pacific Intervarsity Chinese Debate Tournament" className="register-page-logo bian-logo" width="80%" />
           </div>
         </div>
       </div>

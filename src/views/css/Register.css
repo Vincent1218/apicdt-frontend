@@ -1,33 +1,8 @@
-/* html,body
-{ */
-    /* width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden;  */
-    
-/* }  */
-
 .block{
   position: absolute;
   height:100vh;
   width: 100%;
   background-color: #F5F5F5;
-  /* background-image:   
-	url("image/bg-top.png"), 
-	url("image/bg-middle.png"),
-	url("image/bg-bottom.png");
-  background-repeat: repeat-x;
-  background-position: 
-	0 20%,
-	0 10%,
-	0 50%;
-  background-size: 
-	2800px,
-	1600px,
-	2000px;
-  animation: 50s para infinite linear;
-	background-attachment: fixed; */
 }
 
 /* ::placeholder{
@@ -98,21 +73,15 @@
   margin-left: 0.8rem;
 }
 
-.logo{
+.register-page-logo-div{
   padding-left: 5%;
   padding-top:2%
 }
 
-/* .aten-logo{
-	position:absolute;
-	z-index: 1;
-}
-
-.abian-logo{
-	position:absolute;
-	z-index: 2;
-	right:1%;
-} */
+.alertHeading{
+  margin-bottom:0;
+  font-size: 1.2rem;
+} 
 
 .remarks{
   font-size:1vw;
@@ -122,25 +91,25 @@
 }
 
 .form-control{
-  font-size: 1vw;
+  font-size: 1rem !important;
+  height: 2.3rem !important;
 }
 
 @media screen and (max-width:768px){
-	.bian-logo{
+	.register-page-logo{
 		display:none;
 	}
-	.ten-logo{
-    display:none;
-  }
   .main_block{
+    margin-top: 6rem;
     width:80%;
   }
   .register_header{
     font-size: 4vw;
   }
   .form-control{
-    font-size: 2.3vw;
-    height: 1.8rem;
+    font-size: 0.72rem !important;
+    height: 2rem !important;
+    
   }
   .formHeader{
     font-size: 3vw;
@@ -155,6 +124,5 @@
 
 
 
-.modal{
-  padding-top: 5rem;
-}
+
+
