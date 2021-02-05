@@ -10,21 +10,21 @@ class Footer extends Component {
               <div className="row">
                 <div className="col-sm-6">
                   <div>
-                    <h4>Contact</h4>
+                    <h4>联系方式</h4>
                     <dl>
-                        <dt>Tel:</dt>
+                        <dt>咨询电话:</dt>
                         <dd>+65 12345678</dd>
                         <dd>+65 01234567</dd>
                     </dl>
                     <dl>
-                        <dt>Email:</dt>
+                        <dt>邮箱:</dt>
                         <dd><a href="mailto:someone@email.com">someone1@email.com</a></dd>
                         <dd><a href="mailto:someone@email.com">someone2@email.com</a></dd>
                     </dl>
                   </div>
                 </div>
                 <div className="col-sm-6">
-                  <h4>Follow Us</h4>
+                  <h4>关注我们</h4>
                       <ul className="social-network social-circle">
                        <li><a href="https://www.facebook.com/NTUCSapchinesedebate/" className="icoFacebook" title="Facebook" target="_blank" rel="noreferrer"><i className="fab fa-facebook-f"></i></a></li>
                        <li><a href="https://www.instagram.com/apchinesedebate/" className="icoinstagram" title="instagram" target="_blank" rel="noreferrer"><i className="fab fa-instagram"></i></a></li>
