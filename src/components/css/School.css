@@ -1,0 +1,9 @@
+.schoolBlock{
+  background-color: #F5F5F5;
+  width:100%;
+  color:#3B454C;
+  border-radius: 0.3rem;
+  padding:1%;
+  margin-bottom:1%;
+  box-shadow: 0rem 0rem 0.5rem #8d8d8d;
+}

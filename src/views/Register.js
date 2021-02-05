@@ -120,9 +120,6 @@ const Register = () => {
                 <div className="mb-3 col-6">
                   <input type="text" className={`form-control englsihF  ${registerData.engSchoolName ? "is-valid" : ""} ${(!registerData.engSchoolName && changed_1) ? "is-invalid" : ""}`}  value={registerData.engSchoolName} placeholder="Name of School" onChange={(e) => setChanged_1(true) & setRegisterData({ ...registerData, engSchoolName: e.target.value })} />
                 </div>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
                 <div className="mb-3 col-6">
                   <input type="text" className= {`form-control ${registerData.chiSchoolName ? "is-valid" : ""} ${(!registerData.chiSchoolName && changed_2) ? "is-invalid" : ""}`}  value={registerData.chiSchoolName} placeholder="学校名称" onChange={(e) => setChanged_2(true) & setRegisterData({ ...registerData, chiSchoolName: e.target.value })} />
                 </div>
