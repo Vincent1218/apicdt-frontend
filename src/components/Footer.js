@@ -33,9 +33,9 @@ class Footer extends Component {
                       </ul>       
                 </div>
               </div>
-              <div class="row">
-                <div class="col-12 copy">
-                  <p class="text-center">&copy; Copyright 2021 - 南洋理工大学中文协会 Nanyang Technological University Chinese Society</p>
+              <div className="row">
+                <div className="col-12 copy">
+                  <p className="text-center">&copy; Copyright 2021 - 南洋理工大学中文协会 Nanyang Technological University Chinese Society</p>
                 </div>
               </div>
             </div>
