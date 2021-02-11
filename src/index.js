@@ -12,9 +12,9 @@ import "./assets/bootstrap-4.0.0.css";
 ReactDOM.render((
     
     <Router>
-        <Auth0ProviderWithHistory>
+        {/* <Auth0ProviderWithHistory> */}
             <App />
-        </Auth0ProviderWithHistory>
+        {/* </Auth0ProviderWithHistory> */}
     </Router>
     
   ), document.getElementById('root'))
