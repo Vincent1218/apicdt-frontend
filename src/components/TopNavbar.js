@@ -58,9 +58,9 @@ function TopNavbar() {
                     <NavLink to="/schoolList" exact className="nav-link" activeClassName="router-link-exact-active"> 查看报名学校 </NavLink>
                     <NavLink to="/page2" exact className="nav-link" activeClassName="router-link-exact-active"> 页面二 </NavLink>
                 </Nav>
-                <Nav className="" onClick={closeExpanded}>
+               {/*} <Nav className="" onClick={closeExpanded}>
                     <AuthButton/>
-                </Nav>
+    </Nav> */}
             </Navbar.Collapse>
         </Navbar>
     );
