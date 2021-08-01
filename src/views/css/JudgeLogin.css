@@ -1,0 +1,25 @@
+.JudgeForm{
+  Margin-top: 12rem;
+}
+
+.JudgeTitle{
+  margin-bottom: 3rem;
+  font-size: 3rem;
+  
+}
+
+.alert{
+  width: 40rem;
+  position: fixed !important;
+  margin-left: auto ;
+  margin-right: auto ;
+  left: 0 ; 
+  right: 0 ; 
+  top: 5rem;
+  text-align: center !important;
+  z-index: 10;
+}
+
+.JudgeLoginSel{
+  margin-top: 1rem;
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import './css/Loading.css'
+import './css/IsLoading.css'
 const loadingImg =
   "https://cdn.auth0.com/blog/auth0-react-sample/assets/loading.svg";
 

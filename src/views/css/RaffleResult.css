@@ -1,0 +1,321 @@
+.raffleResult {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  gap: 1rem 0px;
+  grid-auto-flow: row;
+}
+
+.raffleTitle{
+  margin-top: 1rem;
+  font-size: 4rem;
+}
+
+.raffleSubTitle{
+  font-size: 3rem;
+}
+
+.raffleSubTitle1{
+  margin-top: 7rem;
+  font-size: 3rem;
+}
+
+
+.containerOne {
+  display: grid;
+  grid-template-columns: 0.1fr 1fr;
+  grid-template-rows: .2fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "RaffleResultTableHeader RaffleResultTableHeader"
+    "ABHead AB"
+    "CDHead CD"
+    "EFHead EF"
+    "GHHead GH";
+}
+
+.RaffleResultTableHeader {
+  grid-column: span 2;
+  margin-top : 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.RaffleResultTableHeader span {
+  grid-area: RaffleResultTableHeader;
+  background-color: rgb(87, 87, 87);
+  padding: .5rem 1rem .5rem 1rem;
+  color: white;
+}
+
+.AB {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  border: solid 2px #6353f0;
+  border-bottom: solid 0px #6353f0;
+  grid-template-areas:
+    "A"
+    "B";
+  grid-area: AB;
+
+}
+.A {
+  grid-area: A;
+  /* border-bottom: solid 1px #6353f0; */
+  background-color: rgb(231, 231, 231);
+  padding: .5rem;
+  padding-left: 1rem;
+  /* height :1rem; */
+}
+.B {
+  grid-area: B;
+  padding: .5rem;
+  padding-left: 1rem;
+}
+
+.CD {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  border: solid 2px #6353f0;
+  border-bottom: solid 0px #6353f0;
+  grid-template-areas:
+    "C"
+    "D";
+  grid-area: CD;
+}
+.C {
+  grid-area: C;
+  padding: .5rem;
+  padding-left: 1rem;
+  /* border-bottom: solid 1px #6353f0; */
+  background-color: rgb(231, 231, 231);
+}
+.D {
+  grid-area: D;
+  padding: .5rem;
+  padding-left: 1rem;
+}
+
+.EF {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  border: solid 2px #6353f0;
+  border-bottom: solid 0px #6353f0;
+  grid-template-areas:
+    "E"
+    "F";
+  grid-area: EF;
+}
+.E {
+  grid-area: E;
+  padding: .5rem;
+  padding-left: 1rem;
+  /* border-bottom: solid 1px #6353f0; */
+  background-color: rgb(231, 231, 231);
+}
+.F {
+  grid-area: F;
+  padding: .5rem;
+  padding-left: 1rem;
+}
+
+.GH {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  border: solid 2px #6353f0;
+  /* border-bottom: solid 0px #6353f0; */
+  grid-template-areas:
+    "G"
+    "H";
+  grid-area: GH;
+}
+.G {
+  grid-area: G;
+  padding: .5rem;
+  padding-left: 1rem;
+  /* border-bottom: solid 1px #6353f0; */
+  background-color: rgb(231, 231, 231);
+}
+.H {
+  grid-area: H;
+  padding: .5rem;
+  padding-left: 1rem;
+}
+
+.ABHead {
+  grid-area: ABHead;
+  border: solid 1px #6353f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6353f0;
+  color: white;
+}
+.CDHead {
+  grid-area: CDHead;
+  border: solid 1px #6353f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6353f0;
+  color: white;
+}
+.EFHead {
+  grid-area: EFHead;
+  border: solid 1px #6353f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6353f0;
+  color: white;
+}
+.GHHead {
+  grid-area: GHHead;
+  border: solid 1px #6353f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6353f0;
+  color: white;
+}
+
+.containerTwo {
+  display: grid;
+  grid-template-columns: 0.1fr 1fr;
+  grid-template-rows: 0.2fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "RaffleResultTableHeader RaffleResultTableHeader"
+    "I1Head I1"
+    "I2Head I2";
+}
+
+.I1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  border: solid 2px #6353f0;
+  border-bottom: solid 0px #6353f0;
+  grid-template-areas:
+    "I1A"
+    "I1B";
+  grid-area: I1;
+}
+.I1A {
+  grid-area: I1A;
+  padding: .5rem;
+  padding-left: 1rem;
+  /* border-bottom: solid 1px #6353f0; */
+  background-color: rgb(231, 231, 231);
+}
+.I1B {
+  grid-area: I1B;
+  padding: .5rem;
+  padding-left: 1rem;
+}
+
+.I2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  border: solid 2px #6353f0;
+  /* border-bottom: solid 0px #6353f0; */
+  grid-template-areas:
+    "I2A"
+    "I2B";
+  grid-area: I2;
+}
+.I2A {
+  grid-area: I2A;
+  padding: .5rem;
+  padding-left: 1rem;
+  /* border-bottom: solid 1px #6353f0; */
+  background-color: rgb(231, 231, 231);
+}
+.I2B {
+  grid-area: I2B;
+  padding: .5rem;
+  padding-left: 1rem;
+}
+
+.I1Head {
+  grid-area: I1Head;
+  border: solid 1px #6353f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6353f0;
+  color: white;
+}
+.I2Head {
+  grid-area: I2Head;
+  border: solid 1px #6353f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6353f0;
+  color: white;
+}
+
+.containerThree {
+  display: grid;
+  grid-template-columns: 0.1fr 1fr;
+  grid-template-rows: 0.2fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "RaffleResultTableHeader RaffleResultTableHeader"
+    "J1Head J1";
+}
+
+.J1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  border: solid 2px #6353f0;
+  grid-template-areas:
+    "J1A"
+    "J1B";
+  grid-area: J1;
+}
+.J1A {
+  grid-area: J1A;
+  padding: .5rem;
+  padding-left: 1rem;
+  /* border-bottom: solid 1px #6353f0; */
+  background-color: rgb(231, 231, 231);
+}
+.J1B {
+  grid-area: J1B;
+  padding: .5rem;
+  padding-left: 1rem;
+}
+
+.J1Head {
+  grid-area: J1Head;
+  border: solid 1px #6353f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6353f0;
+  color: white;
+}

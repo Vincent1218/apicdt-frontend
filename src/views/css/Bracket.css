@@ -1,0 +1,307 @@
+.containerBracket {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 25px 25px;
+  grid-template-areas:
+    "AB . SemiFinalOne . GH"
+    "AB . SemiFinalOne . GH"
+    "CD RoundTwoOne Final RoundTwoTwo IJ"
+    "CD RoundTwoOne Final RoundTwoTwo IJ"
+    "EF . SemiFinalTwo . KL"
+    "EF . . . KL";
+}
+
+.mainBlockBracket {
+  color: #3b454c;
+  background-color: #ffffff;
+  /* margin: auto; */
+  margin-left: 12.5%;
+  margin-right: 12.5%;
+  margin-top: 8%;
+  border: 1px solid #cecece;
+  border-radius: 0.5rem;
+  padding: 5%;
+  padding-top: 1%;
+  padding-bottom: 3%;
+  margin-bottom: 3%;
+  box-shadow: 0rem 0rem 0.5rem #8d8d8d;
+  width: 75% !important;
+}
+
+.AB {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr 0.3fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". . ."
+    ". . ."
+    ". . ."
+    ". . ."
+    ". . ."
+    ". . .";
+  grid-area: AB;
+  border: 2px solid black;
+}
+
+.CD {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr 0.3fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". . ."
+    ". . ."
+    ". . ."
+    ". . ."
+    ". . .";
+  grid-area: CD;
+}
+
+.EF {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr 0.3fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". . ."
+    ". . ."
+    ". . ."
+    ". . ."
+    ". . .";
+  grid-area: EF;
+}
+
+.GH {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr 0.3fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". . ."
+    ". . ."
+    ". . ."
+    ". . ."
+    ". . .";
+  grid-area: GH;
+}
+
+.IJ {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr 0.3fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". . ."
+    ". . ."
+    ". . ."
+    ". . ."
+    ". . .";
+  grid-area: IJ;
+}
+
+.KL {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr 0.3fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". . ."
+    ". . ."
+    ". . ."
+    ". . ."
+    ". . .";
+  grid-area: KL;
+}
+
+.Final {
+  grid-area: Final;
+}
+
+.Final > img {
+  object-fit: fill;
+  width: 100%;
+  max-height: 100%;
+}
+
+.SemiFinalOne {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    "bracketSemiFinalTitle bracketSemiFinalTitle bracketSemiFinalTitle"
+    ". . ."
+    ". . ."
+    ". . ."
+    ". . .";
+  grid-area: SemiFinalOne;
+}
+
+.SemiFinalTwo {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". . ."
+    ". . .";
+  grid-area: SemiFinalTwo;
+}
+
+.RoundTwoOne {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "."
+    "."
+    "."
+    "."
+    "."
+    ".";
+  grid-area: RoundTwoOne;
+}
+
+.RoundTwoTwo {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  justify-items: end;
+  grid-template-areas:
+    "."
+    "."
+    "."
+    "."
+    "."
+    ".";
+  grid-area: RoundTwoTwo;
+}
+
+.groupName {
+  background-color: #6353f0;
+}
+
+.bracket6C4 {
+  justify-self: center;
+  align-self: flex-end;
+  font-size: x-large;
+  color: white;
+}
+.bracket6C4 span {
+  background-color: #6353f0;
+  border-radius: 2rem;
+}
+
+.bracketPromotedTeam {
+  justify-self: center;
+  font-size: large;
+}
+
+.bracketPromotedTeam span {
+  border: 1px solid black;
+  color: #6353f0;
+  border-radius: 2rem;
+}
+
+.bracketSemiFinalTitleOne {
+  grid-area: bracketSemiFinalTitle;
+  justify-self: center;
+  align-self: flex-end;
+}
+.bracketSemiFinalTitleOne span {
+  border-radius: 2rem;
+  background-color: lightslategrey;
+  font-size: xx-large;
+  color: white;
+}
+.bracketSemiFinalTitleTwo span {
+  border-radius: 2rem;
+  background-color: lightslategrey;
+  font-size: xx-large;
+  color: white;
+}
+
+/* html, body , .container {
+    height: 100%;
+    margin: 0;
+  } */
+
+/* 小於879像素 */
+@media screen and (max-width: 879px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+    grid-template-rows: min-content;
+    gap: 0px 0px;
+    /* grid-template-areas:
+      "AB . SemiFinalOne . GH"
+      "AB . SemiFinalOne . GH"
+      "CD RoundTwoOne Final RoundTwoTwo IJ"
+      "CD RoundTwoOne Final RoundTwoTwo IJ"
+      "EF . SemiFinalTwo . KL"
+      "EF . . . KL"; */
+    grid-template-areas:
+      "AB . ."
+      "AB . ."
+      "CD RoundTwoOne ."
+      "CD RoundTwoOne ."
+      "EF . ."
+      "EF . ."
+      ". . GH"
+      ". . GH"
+      ". RoundTwoTwo IJ"
+      ". RoundTwoTwo IJ"
+      ". . KL"
+      ". . KL"
+      ". SemiFinalOne ."
+      ". SemiFinalOne ."
+      ". Final ."
+      ". Final ."
+      ". SemiFinalTwo .";
+  }
+  .Final > img {
+    object-fit: scale-down;
+    width: 100%;
+    max-height: 100%;
+  }
+}
+
+/* For presentation only, no need to copy the code below */
+/* 
+  .container * {
+    border: 1px solid red;
+    position: relative;
+  }
+  
+  .container *:after {
+    content:attr(class);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  } */

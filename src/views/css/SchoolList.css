@@ -1,8 +1,27 @@
 .schoolsBlock{
-  margin-top: 6rem;
+  margin-top: 6rem ;
 }
 
 .listHeader{
   font-size: 2rem;
-  margin-bottom: 1rem;;
+  margin-bottom: 1rem;
+}
+
+.listHeader1{
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.dis{
+  display: none;
+}
+
+.ps{
+  margin-top: 1rem;
+  padding-bottom :2.5rem;
+}
+
+.invi{
+  visibility: hidden;
 }

@@ -1,0 +1,119 @@
+/* litt */
+
+.portfolioTitle {
+  margin: auto;
+}
+
+.jobs {
+  margin: 150px;
+}
+
+.titleContainer {
+  margin-top: 2rem;
+}
+.heading {
+  margin-top: 2rem;
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  letter-spacing: 3px;
+  margin-right: -3px;
+  margin-bottom: 5rem;
+  text-align: center;
+  color: #333;
+  position: relative;
+}
+
+.heading::after {
+  content: "";
+  width: 10rem;
+  height: 0.8rem;
+  background-color: #45e19f;
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2rem;
+}
+
+.card-wrapper {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.card {
+  width: 23rem;
+  height: 40rem;
+  background-color: #f8ebf2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  box-shadow: 0.5rem 0.5rem 2rem #808080;
+  border-radius: 20px;
+}
+
+.card .card-img {
+  width: 100%;
+  height: 28rem;
+  object-fit: cover;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 51%, 0% 100%);
+}
+
+.profile-img {
+  width: 13rem;
+  height: 13rem;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: -11rem;
+  z-index: 999;
+  border: 1rem solid #ebeef8;
+}
+
+.card h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin: 2.5rem;
+}
+
+.job-title {
+  font-size: 2.5rem;
+}
+
+.about {
+  padding: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .card-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.card {
+  margin: 2rem;
+}
+
+.card {
+  animation: fadeIn 0.5s 0.5s backwards;
+}
+/* .card:nth-child(2){
+    animation: fadeIn .1s .1s backwards;
+  } */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.card:hover {
+  transform: scale(1.2);
+}

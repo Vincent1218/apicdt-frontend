@@ -1,0 +1,28 @@
+.tablecontainer{
+    overflow-x: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.empt{
+    color: red;
+}
+
+h3{
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -o-hyphens: auto;
+    hyphens: auto;
+}
+
+@media only screen and (max-width: 960) {
+    h3{
+        font-size: 4vw !important;
+    }
+
+    h5{
+        font-size: 3vw !important;
+    }
+  }

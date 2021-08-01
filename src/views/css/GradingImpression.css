@@ -1,0 +1,59 @@
+.btn-hover {
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    -moz-transition-property: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    box-shadow: 0 4px 15px 0 rgba(172, 199, 238, 0.75);
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    -moz-transition-property: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+
+.pressedButton{
+    background-image: linear-gradient(to right, #6253e1, #852D91, #A3A1FF, #F24645);
+    box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+    
+}
+
+.tablecontainer{
+    overflow-x: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+h3{
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -o-hyphens: auto;
+    hyphens: auto;
+}
+
+@media only screen and (max-width: 960px) {
+    h3{
+        font-size: 4vw !important;
+    }
+
+    h5{
+        font-size: 3vw !important;
+    }
+  }
+

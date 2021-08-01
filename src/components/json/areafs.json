@@ -1,0 +1,10 @@
+[
+  {"area" : "种子队伍","value":"seed"},
+  {"area" : "马来西亚","value":"my"},
+  {"area" : "新加坡","value":"sg"},
+  {"area" : "香港","value":"hk"},
+  {"area" : "澳门","value":"mc"},
+  {"area" : "澳大利亚","value":"au"},
+  {"area" : "中国大陆","value":"cm"},
+  {"area" : "英国","value":"uk"}
+]

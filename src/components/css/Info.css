@@ -1,8 +1,16 @@
 
 .info-block{
-    height: 100vh;
-	padding-top: 10%;
+	padding-top: 7%;
+	padding-bottom: 15vh;
 	text-align:center;
 	color: white;
 	font-size: 2vw;
+}
+
+/*changes made when screen size is small(bootstrap small)*/
+@media screen and (max-width:991px){
+	.info-block{
+		font-size: 3.5vw;
+		padding-bottom: 10vh;
+	}
 }

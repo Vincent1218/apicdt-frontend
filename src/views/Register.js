@@ -1,11 +1,15 @@
 import { useState } from 'react'
 import React from 'react'
 import './css/Register.css';
-import logoBase from '../assets/image/yatai 10th logo-10.png';
-import logo from '../assets/image/yatai 10th logo-bian.png';
+import logo from '../assets/image/yatai 10th logo700.png';
 
 import Alert from 'react-bootstrap/Alert';
+import Form from 'react-bootstrap/Form';
+import inis from "../components/json/inis.json";
 
+import {serverURL} from '../config.js'
+
+import Footer from '../components/Footer'
 
 const Register = () => {
   const [registerData, setRegisterData] = useState ({engSchoolName : '',chiSchoolName : '',engTeamLeaderName : '',chiTeamLeaderName : '',teamLeaderContact : '',teamLeaderEmail : '',debateTopics_1 : '',debateTopics_2 : ''});
@@ -18,17 +22,20 @@ const Register = () => {
   const[changed_7,setChanged_7] = useState(false);
   const[changed_8,setChanged_8] = useState(false);
 
+  const[prefix,setPrefix] = useState('');
+
   const[isEmail1,setIsEmail1] = useState(false);
 
 
   const [showS, setShowS] = useState(false);
   const [showF, setShowF] = useState(false);
+  const [showA, setShowA] = useState(false);
 
 
 
 
   const addRegisterData = async (registerData) =>{
-    const res = await fetch ('https://apicdt.herokuapp.com/register',{
+    const res = await fetch ((serverURL+'register'),{
       method : 'POST',
       headers:{
         'Content-type':'application/json',
@@ -36,15 +43,20 @@ const Register = () => {
       body: JSON.stringify(registerData),
     })
     const data = await res.json()
-    console.log(data);
-    console.log('res', res) ;
     if (res.status === 201){
       setShowS(true);
       setShowF(false);
+      setShowA(false);
+    }
+    else if (res.status === 401){
+      setShowS(false);
+      setShowF(false);
+      setShowA(true);
     }
     else{
       setShowF(true);
       setShowS(false);
+      setShowA(false);
     }
   }
   
@@ -60,13 +72,14 @@ const Register = () => {
     // console.log(isEmail1);
   }
 
+  const getSelection=(event)=>{
+    setPrefix(event.target.value);
+  }
+
   const onSubmit = (e) =>{
     e.preventDefault()
-
     isEmail(registerData.teamLeaderEmail);
-    
     // console.log(isEmail1);
-
     if(registerData.engSchoolName === '' ||
     registerData.chiSchoolName === '' ||
     registerData.engTeamLeaderName === '' ||
@@ -75,14 +88,15 @@ const Register = () => {
     registerData.teamLeaderEmail === '' ||
     registerData.debateTopics_1 === '' ||
     registerData.debateTopics_2 ==='' ||
+    prefix ==='' ||
     isEmail1 === false){
       setShowF(true);
       setShowS(false);
+      setShowA(false);
       return;
     }
-
     
-
+    registerData.teamLeaderContact = prefix+registerData.teamLeaderContact
 
     addRegisterData(registerData);
     setRegisterData ({engSchoolName : '',chiSchoolName : '',engTeamLeaderName : '',chiTeamLeaderName : '',teamLeaderContact : '',teamLeaderEmail : '',debateTopics_1 : '',debateTopics_2 : ''});
@@ -95,20 +109,22 @@ const Register = () => {
     setChanged_7(false);
     setChanged_8(false);
 
-
   }
   
   return (
     <section className="header-gradient"> 
       <div className="container main_block">
-        <Alert show={showS} class= "alert" variant="success" onClose={() => setShowS(false)} dismissible>
-          <Alert.Heading class = "alertHeading"> 提交成功 ！/ Registration Successful ！ </Alert.Heading>
+        <Alert show={showS} className= "alert" variant="success" onClose={() => setShowS(false)} dismissible>
+          <Alert.Heading className = "alertHeading"> 提交成功 ！/ Registration Successful ！ </Alert.Heading>
         </Alert>
-        <Alert show={showF} class= "alert" variant="danger" onClose={() => setShowF(false)} dismissible>
-          <Alert.Heading class = "alertHeading"> 提交失败 ！/ Registration Failed ！ </Alert.Heading>
+        <Alert show={showF} className= "alert" variant="danger" onClose={() => setShowF(false)} dismissible>
+          <Alert.Heading className = "alertHeading"> 提交失败 ！/ Registration Failed ！ </Alert.Heading>
+        </Alert>
+        <Alert show={showA} className= "alert" variant="danger" onClose={() => setShowA(false)} dismissible>
+          <Alert.Heading className = "alertHeading"> 电子邮件重复 ！/ Email Duplicated ！ </Alert.Heading>
         </Alert>
         <div className="register_header">
-            <span className = "englishF"> Register / </span> <span> 注册 </span>
+            <span className = "englishF"> Register / </span> <span> 报名 </span>
         </div>
         <div className="regBlock row">
           <form className="col-md-8 col-12 regForm" noValidate onSubmit = {onSubmit}>
@@ -137,8 +153,19 @@ const Register = () => {
                   <input type="text" className={`form-control   ${registerData.chiTeamLeaderName ? "is-valid" : ""} ${(!registerData.chiTeamLeaderName && changed_4) ? "is-invalid" : ""}`} value={registerData.chiTeamLeaderName} placeholder="队长姓名" onChange={(e) => setChanged_4(true) & setRegisterData({ ...registerData, chiTeamLeaderName: e.target.value })}/>
                 </div>
               </div>
-              <div className="mb-3">
-                <input type="text" className={`form-control   ${registerData.teamLeaderContact ? "is-valid" : ""} ${(!registerData.teamLeaderContact && changed_5) ? "is-invalid" : ""}`}  value={registerData.teamLeaderContact} placeholder="队长联络电话" onChange={(e) => setChanged_5(true) & setRegisterData({ ...registerData, teamLeaderContact: e.target.value })}/>
+              <div className="row mb-3">
+                <Form.Control
+                  as="select"
+                  className="col-3 mr-sm-2 selec"
+                  id="inlineFormCustomSelect"
+                  onChange={(e) => getSelection(e)}
+                >
+                  <option className = "prefix" value="">国际电话区号</option>
+                  {inis.map(ini => (
+                    <option value={ini.no} >{ini.no}</option>
+                  ))}
+                </Form.Control>
+                <input type="text" className={`col contact form-control   ${registerData.teamLeaderContact ? "is-valid" : ""} ${(!registerData.teamLeaderContact && changed_5) ? "is-invalid" : ""}`}  value={registerData.teamLeaderContact} placeholder="队长联络电话" onChange={(e) => setChanged_5(true) & setRegisterData({ ...registerData, teamLeaderContact: e.target.value })}/>
               </div>
               <div className="mb-3">
                 <input type="email" className={`form-control   ${(registerData.teamLeaderEmail && isEmail1) ? "is-valid" : ""} ${(!registerData.teamLeaderEmail && changed_6) ? "is-invalid" : ""}`} value={registerData.teamLeaderEmail} placeholder="队长电邮地址" onChange={(e) =>   setChanged_6(true) & setRegisterData({ ...registerData, teamLeaderEmail: e.target.value }) & isEmail(registerData.teamLeaderEmail)}/>
@@ -159,16 +186,16 @@ const Register = () => {
               <div className="form-text remarks englishF">Remarks: The topics submitted will be used for this tournament. </div>
               <div className="form-text remarks">备注：所提交之辩题将会作为本赛事之用 </div>
             </div>
-            <button  type="submit" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal" value='Save Form'>
+            <button  type="submit" className="btn sub btn btn-primary" data-toggle="modal" data-target="#exampleModal" value='Save Form'>
               <span className = "englishF"> Submit / </span> <span> 提交 </span>
             </button>
           </form>
-          <div className="col-4 logo">
-            <img src= {logoBase} alt="Asia-Pacific Intervarsity Chinese Debate Tournament" className="register-page-logo ten-logo" width="80%" />
-            <img src= {logo} alt="Asia-Pacific Intervarsity Chinese Debate Tournament" className="register-page-logo bian-logo" width="80%" />
+          <div className="col-4">
+            <img src= {logo} alt="Asia-Pacific Intervarsity Chinese Debate Tournament" className="register-page-logo" width="80%" />
           </div>
         </div>
       </div>
+      <Footer />
     </section>
   );
 }

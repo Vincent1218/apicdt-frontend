@@ -24,6 +24,18 @@
   box-shadow: 0rem 0rem 0.5rem #8d8d8d;
 }
 
+.selec{
+  margin-left:0.99rem;
+  margin-right:1rem;
+  padding-left: 0.4rem !important;
+  color:#3B454C !important;
+}
+
+
+.contact{
+  margin-right:0.99rem;
+}
+
 
 .englishF{
   font-family: Arial, Helvetica, sans-serif ;
@@ -73,11 +85,6 @@
   margin-left: 0.8rem;
 }
 
-.register-page-logo-div{
-  padding-left: 5%;
-  padding-top:2%
-}
-
 .alertHeading{
   margin-bottom:0;
   font-size: 1.2rem;
@@ -88,6 +95,15 @@
   color:#919191;
   padding-left: 3%;
   margin-top:1%;
+}
+
+.TopicType{
+  margin: auto !important;
+}
+
+.topicbtn{
+  margin-left: 1.5rem !important;
+  margin-right: 1.5rem !important;
 }
 
 .form-control{
@@ -114,8 +130,9 @@
   .formHeader{
     font-size: 3vw;
   }
-  .btn{
+  .btnsub{
     font-size:2vw;
+    /* margin-left:0.5rem !important; */
   }
   .remarks{
     font-size:1.5vw;

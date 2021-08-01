@@ -13,7 +13,6 @@ function Info() {
                     第十届亚太大专华语辩论赛，静候君来。
                 </p>
             </Zoom>
-            
         </section>
     );
 }

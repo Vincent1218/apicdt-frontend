@@ -1,10 +1,19 @@
 footer {
   background: #16222A;
-  background: -webkit-linear-gradient(59deg, #3A6073, #16222A);
-  background: linear-gradient(59deg, #3A6073, #16222A);
-  color: white;
+  /* background: -webkit-linear-gradient(59deg, #3A6073, #16222A); */
+  background: linear-gradient(59deg, #6894aa, #3d5261);
+  color: #ffffff;
   padding-top: 3%;
-  margin-top: 15px;
+  margin-top: 5%;
+  position: static;
+}
+
+.footercontainer{
+  width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 footer a {
@@ -22,11 +31,58 @@ dl{
   margin-right: 50px;
 }
 
-.copy {
+.bottom-div{
+  padding-top: 10px;
+}
+
+.bottom-text {
   font-size: 12px;
   padding: 10px;
   border-top: 1px solid #FFFFFF;
 }
+
+.ICBC-logo{
+  width:40%;
+  margin-bottom: 2rem;
+}
+
+.TYS-logo{
+  width:15%;
+  margin-bottom: 2rem;
+}
+
+.IQY-logo{
+  width:13%;
+  margin-bottom: 2rem;
+}
+
+
+.CLCF-logo{
+  width:15%;
+  margin-bottom: 2rem;
+}
+
+.NYC-logo{
+  width:20%;
+  margin-bottom: 2rem;
+}
+
+.MANSA-logo{
+  width:12%;
+  margin-bottom: 2rem;
+}
+
+.SC-logo{
+  width:20%;
+  margin-bottom: 2rem;
+}
+
+.SE-logo{
+  width:12%;
+}
+
+
+
 
 ul.social-network {
   list-style: none;
@@ -85,9 +141,9 @@ ul.social-network li {
 .social-circle li i {
     position: relative;
     top: 15%;
-  margin: 0;
-  line-height: 30px;
-  text-align: center;
+    margin: 0;
+    line-height: 30px;
+    text-align: center;
 }
 
 .social-circle li a:hover i,
@@ -115,3 +171,31 @@ ul.social-network li {
 .social-network a {
   background-color: #F9F9F9;  
 }
+
+
+@media only screen and (max-width: 960px) {
+  .ICBC-logo{
+    width:70%;
+  }
+
+  .footercontainer li a{
+    margin:10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .ICBC-logo{
+    width:70%;
+  }
+
+  .footercontainer .row{
+  display: flex;
+    justify-content: center;
+  flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 992px){
+.footercontainer {
+    max-width: 960px;
+}}

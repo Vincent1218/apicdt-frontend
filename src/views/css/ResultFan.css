@@ -1,0 +1,31 @@
+.mainBlockResult{
+  color:#3B454C;
+  background-color:#FFFFFF;
+  margin: auto;
+  margin-top: 8%; 
+  border:1px solid #cecece;
+  border-radius: 0.5rem;
+  padding: 5%;
+  padding-top:1%;
+  padding-bottom:3%;
+  margin-bottom:3%;
+  box-shadow: 0rem 0rem 0.5rem #8d8d8d;
+}
+
+.subBlockResult{
+  color:#3B454C;
+  background-color:#FFFFFF;
+  margin: auto;
+  border:1px solid #cecece;
+  border-radius: 0.5rem;
+  padding: 5%;
+  padding-top:1%;
+  padding-bottom:3%;
+  margin-bottom:3%;
+  box-shadow: 0rem 0rem 0.5rem #8d8d8d;
+}
+
+.rowResult{
+  border: none !important;
+  /* background-color: ; */
+}
