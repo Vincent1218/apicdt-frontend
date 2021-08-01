@@ -74,7 +74,7 @@ const App = () => {
                     <Route path="/schoolList" exact component={SchoolList} /> */}
                     {/* <Route path="/starwars" exact component={StarWars} /> */}
                     {/* <Route path="/starwarslist" exact component={StarwarsList} /> */}
-                    <Route path="/starwarslisttemp" exact component={StarwarsListTemp} />
+                    {/* <Route path="/starwarslisttemp" exact component={StarwarsListTemp} />
                     <Route path="/registerJudge" exact component={RegisterJudge} />
                     <Route path="/updateJudge" exact component={UpdateJudge} />
                     <Route path="/registerTopic" exact component={RegisterTopic} />
@@ -94,7 +94,7 @@ const App = () => {
                     <Route path="/resultChoose" exact component={ResultChoose} />
                     <Route path="/resultFan" exact component={ResultFan} />
                     <Route path="/result" exact component={Result} />
-                    <Route path="/timeFan" exact component={TimeFan} />
+                    <Route path="/timeFan" exact component={TimeFan} /> */}
 
                     {/* <Route path="/starwarslistmy" exact component={StarwarsListmy} />
                     <Route path="/starwarslistsg" exact component={StarwarsListsg} />
@@ -103,15 +103,15 @@ const App = () => {
                     <Route path="/starwarslistau" exact component={StarwarsListau} />
                     <Route path="/starwarslistcm" exact component={StarwarsListcm} />
                     <Route path="/starwarslistuk" exact component={StarwarsListuk} /> */}
-                    <Route path="/portfolio" exact component={Portfolio} />
+                    {/* <Route path="/portfolio" exact component={Portfolio} /> */}
                     {/* <Route path="/match" exact component={Match} /> */}
                     {/* <Route path="/matchtwo" exact component={MatchTwo} /> */}
                     <Route path="/matchUpTable" exact component={MatchUpTable} />
                     {/* <Route path="/bracket" exact component={Bracket} /> */}
-                    <Route path="/tokenlist" exact component={TokenList} />
+                    {/* <Route path="/tokenlist" exact component={TokenList} /> */}
                     <Route path="/raffleresult" exact component={RaffleResult} />
                     <Route path="/sponsor" exact component={Sponsor} />
-                    <Route path="/topics" exact component={Topics} />
+                    {/* <Route path="/topics" exact component={Topics} /> */}
                     <Route path="/handbook" exact component={Handbook} />
                 </Switch>
                 {/* <Footer /> */}

@@ -61,7 +61,7 @@ function TopNavbar() {
                     <NavLink to="/raffleResult" exact className="nav-link" activeClassName="router-link-exact-active"> 辩题抽签结果 </NavLink>
                     <NavLink to="/handbook" exact className="nav-link" activeClassName="router-link-exact-active"> 辩手手册 </NavLink>
                     <NavLink to="/sponsor" exact className="nav-link" activeClassName="router-link-exact-active"> 鸣谢 </NavLink>
-                    <NavLink to="/judgeLogin" exact className="nav-link" activeClassName="router-link-exact-active"> 评审登入 </NavLink>
+                    {/* <NavLink to="/judgeLogin" exact className="nav-link" activeClassName="router-link-exact-active"> 评审登入 </NavLink> */}
                 </Nav>
                {/*} <Nav className="" onClick={closeExpanded}>
                     <AuthButton/>
